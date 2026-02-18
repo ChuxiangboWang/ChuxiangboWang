@@ -181,7 +181,7 @@
       <path d="M-8 -8 L-18 -14 L-6 -2 Z" fill="#94a3b8"/>
     </g>
 
-    <animateMotion href="#rocket" dur="4.8s" repeatCount="indefinite" rotate="auto">
+    <animateMotion href="#rocket" dur="15s" repeatCount="indefinite" rotate="auto">
       <mpath href="#flightPath"/>
     </animateMotion>
   </g>
