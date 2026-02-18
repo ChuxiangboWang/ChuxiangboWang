@@ -122,7 +122,7 @@
 
       <!-- Line 4 typing: launching… (chunked) -->
       <g>
-        <text x="86" y="228" opacity="0">l
+        <text x="86" y="200" opacity="0">l
           <animate attributeName="opacity" values="0;0;1;1;0"
                    keyTimes="0;0.36;0.38;0.94;1" dur="6.4s" repeatCount="indefinite"/>
         </text>
