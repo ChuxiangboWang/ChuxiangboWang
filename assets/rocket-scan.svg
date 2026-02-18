@@ -160,7 +160,7 @@
     <!-- scan line -->
     <g opacity="0.9">
       <rect x="70" y="95" width="680" height="26" fill="url(#scan)" filter="url(#blur)">
-        <animate attributeName="y" values="95;185;95" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="95;185;95" dur="3.4s" repeatCount="indefinite"/>
       </rect>
       <rect x="70" y="98" width="680" height="2" fill="#22c55e" opacity="0.35">
         <animate attributeName="y" values="98;188;98" dur="3.4s" repeatCount="indefinite"/>
