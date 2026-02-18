@@ -163,7 +163,7 @@
         <animate attributeName="y" values="95;185;95" dur="2.4s" repeatCount="indefinite"/>
       </rect>
       <rect x="70" y="98" width="680" height="2" fill="#22c55e" opacity="0.35">
-        <animate attributeName="y" values="98;188;98" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="98;188;98" dur="3.4s" repeatCount="indefinite"/>
       </rect>
     </g>
   </g>
@@ -172,7 +172,7 @@
   <g>
     <g id="rocket" opacity="0.98">
       <path d="M-10 14 C-26 6, -26 -6, -10 -14 C-18 -2, -18 2, -10 14 Z" fill="#f59e0b" opacity="0.85">
-        <animate attributeName="opacity" values="0.35;0.9;0.35" dur="0.18s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.35;0.9;0.35" dur="0.38s" repeatCount="indefinite"/>
       </path>
       <path d="M0 -16 C10 -10, 16 0, 10 10 C6 14, 2 16, 0 16 C-2 16, -6 14, -10 10 C-16 0, -10 -10, 0 -16 Z"
             fill="#e5e7eb"/>
