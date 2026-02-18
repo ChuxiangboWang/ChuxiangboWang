@@ -164,7 +164,7 @@
                  dur="19.2s" repeatCount="indefinite"/>
       </text>
 
-      <!-- Line 4: launching… (typed chunks, ends exactly at 0.42 => rocket launches) -->
+      <!-- Line 4: Launching… (typed chunks, ends exactly at 0.42 => rocket launches) -->
       <g>
         <text x="86" y="214" opacity="0">l
           <animate attributeName="opacity" values="0;0;1;1;0"
