@@ -112,7 +112,7 @@
       </text>
 
       <!-- Line 2 -->
-      <text x="86" y="150" opacity="0">ChuxiangboWang / README.md
+      <text x="86" y="154" opacity="0">ChuxiangboWang / README.md
         <animate attributeName="opacity"
                  values="0;0;1;1;0"
                  keyTimes="0;0.10;0.18;0.94;1"
@@ -120,7 +120,7 @@
       </text>
 
       <!-- Line 3 -->
-      <text x="86" y="176" opacity="0">This is Chuxiangbo&apos;s GitHub, welcome!
+      <text x="86" y="184" opacity="0">This is Chuxiangbo&apos;s GitHub, welcome!
         <animate attributeName="opacity"
                  values="0;0;1;1;0"
                  keyTimes="0;0.18;0.30;0.94;1"
