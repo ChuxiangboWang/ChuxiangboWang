@@ -155,55 +155,49 @@
       </g>
     </g>
 
-<!-- Cursor that MOVES RIGHT with the launching typing chunks (cycle = 19.2s) -->
+<!-- Cursor that moves right: ONLY ONE animate per cursor (no double-opacity conflict) -->
 <g>
-  <!-- stage 1: "l" (0.32 -> 0.34) -->
+  <!-- stage 1: "l" 0.32 -> 0.34 -->
   <rect x="98" y="200" width="10" height="18" fill="#22c55e" opacity="0">
-    <!-- gate -->
     <animate attributeName="opacity"
-             values="0;0;1;1;0;0"
-             keyTimes="0;0.319;0.320;0.340;0.341;1"
-             dur="19.2s" repeatCount="indefinite"/>
-    <!-- blink -->
-    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite"/>
+             dur="19.2s" repeatCount="indefinite"
+             values="0; 0; 1; 0; 1; 0; 0"
+             keyTimes="0; 0.319; 0.322; 0.328; 0.334; 0.340; 1"/>
   </rect>
 
-  <!-- stage 2: "la" (0.34 -> 0.36) -->
+  <!-- stage 2: "la" 0.34 -> 0.36 -->
   <rect x="110" y="200" width="10" height="18" fill="#22c55e" opacity="0">
     <animate attributeName="opacity"
-             values="0;0;1;1;0;0"
-             keyTimes="0;0.339;0.340;0.360;0.361;1"
-             dur="19.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite"/>
+             dur="19.2s" repeatCount="indefinite"
+             values="0; 0; 1; 0; 1; 0; 0"
+             keyTimes="0; 0.339; 0.342; 0.348; 0.354; 0.360; 1"/>
   </rect>
 
-  <!-- stage 3: "laun" (0.36 -> 0.38) -->
+  <!-- stage 3: "laun" 0.36 -> 0.38 -->
   <rect x="130" y="200" width="10" height="18" fill="#22c55e" opacity="0">
     <animate attributeName="opacity"
-             values="0;0;1;1;0;0"
-             keyTimes="0;0.359;0.360;0.380;0.381;1"
-             dur="19.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite"/>
+             dur="19.2s" repeatCount="indefinite"
+             values="0; 0; 1; 0; 1; 0; 0"
+             keyTimes="0; 0.359; 0.362; 0.368; 0.374; 0.380; 1"/>
   </rect>
 
-  <!-- stage 4: "launch" (0.38 -> 0.40) -->
+  <!-- stage 4: "launch" 0.38 -> 0.40 -->
   <rect x="160" y="200" width="10" height="18" fill="#22c55e" opacity="0">
     <animate attributeName="opacity"
-             values="0;0;1;1;0;0"
-             keyTimes="0;0.379;0.380;0.400;0.401;1"
-             dur="19.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite"/>
+             dur="19.2s" repeatCount="indefinite"
+             values="0; 0; 1; 0; 1; 0; 0"
+             keyTimes="0; 0.379; 0.382; 0.388; 0.394; 0.400; 1"/>
   </rect>
 
-  <!-- stage 5: "launching…" (0.40 -> 0.42) -->
+  <!-- stage 5: "launching…" 0.40 -> 0.42 -->
   <rect x="210" y="200" width="10" height="18" fill="#22c55e" opacity="0">
     <animate attributeName="opacity"
-             values="0;0;1;1;0;0"
-             keyTimes="0;0.399;0.400;0.420;0.421;1"
-             dur="19.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite"/>
+             dur="19.2s" repeatCount="indefinite"
+             values="0; 0; 1; 0; 1; 0; 0"
+             keyTimes="0; 0.399; 0.402; 0.408; 0.414; 0.420; 1"/>
   </rect>
 </g>
+
 
 
     <!-- scan line (slow x3: 2.4 -> 7.2) -->
