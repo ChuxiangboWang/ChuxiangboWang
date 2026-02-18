@@ -131,23 +131,23 @@
       <g>
         <text x="86" y="214" opacity="0">l
           <animate attributeName="opacity" values="0;0;1;1;0"
-                   keyTimes="0;0.32;0.34;0.94;1" dur="9.6s" repeatCount="indefinite"/>
+                   keyTimes="0;0.32;0.34;0.94;1" dur="20s" repeatCount="indefinite"/>
         </text>
         <text x="86" y="214" opacity="0">la
           <animate attributeName="opacity" values="0;0;1;1;0"
-                   keyTimes="0;0.34;0.36;0.94;1" dur="9.6s" repeatCount="indefinite"/>
+                   keyTimes="0;0.34;0.36;0.94;1" dur="20s" repeatCount="indefinite"/>
         </text>
         <text x="86" y="214" opacity="0">laun
           <animate attributeName="opacity" values="0;0;1;1;0"
-                   keyTimes="0;0.36;0.38;0.94;1" dur="9.6s" repeatCount="indefinite"/>
+                   keyTimes="0;0.36;0.38;0.94;1" dur="20s" repeatCount="indefinite"/>
         </text>
         <text x="86" y="214" opacity="0">launch
           <animate attributeName="opacity" values="0;0;1;1;0"
-                   keyTimes="0;0.38;0.40;0.94;1" dur="9.6s" repeatCount="indefinite"/>
+                   keyTimes="0;0.38;0.40;0.94;1" dur="20s" repeatCount="indefinite"/>
         </text>
         <text x="86" y="214" opacity="0">launching…
           <animate attributeName="opacity" values="0;0;1;1;0"
-                   keyTimes="0;0.40;0.42;0.94;1" dur="9.6s" repeatCount="indefinite"/>
+                   keyTimes="0;0.40;0.42;0.94;1" dur="20s" repeatCount="indefinite"/>
         </text>
       </g>
     </g>
