@@ -1,18 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="290" viewBox="0 0 900 260">
   <defs>
-    <!-- Background gradient -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1020"/>
       <stop offset="1" stop-color="#05070f"/>
     </linearGradient>
 
-    <!-- Terminal window gradient -->
     <linearGradient id="term" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#111827"/>
       <stop offset="1" stop-color="#0b1220"/>
     </linearGradient>
 
-    <!-- Scan glow -->
     <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#22c55e" stop-opacity="0"/>
       <stop offset="0.5" stop-color="#22c55e" stop-opacity="0.25"/>
@@ -23,68 +20,18 @@
       <feGaussianBlur stdDeviation="2"/>
     </filter>
 
-    <!-- Moon shading -->
+    <!-- Moon -->
     <radialGradient id="moonGrad" cx="35%" cy="30%" r="75%">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
       <stop offset="0.45" stop-color="#e5e7eb" stop-opacity="0.95"/>
       <stop offset="1" stop-color="#cbd5e1" stop-opacity="0.95"/>
     </radialGradient>
-
     <filter id="moonShadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.35"/>
     </filter>
 
-    <!-- Rocket path -->
+    <!-- rocket path -->
     <path id="flightPath" d="M 140 205 C 260 165, 360 150, 470 135 S 710 95, 790 70" />
-
-    <!-- -------- Typing clips (each line reveals, then holds, then resets every 6.4s) --------
-         Total cycle = 6.4s (rocket twice: 2 * 3.2s)
-         Each rect anim: 0 -> W (type), hold, then reset to 0 near end.
-    -->
-    <clipPath id="clipL1">
-      <rect x="86" y="104" width="0" height="26">
-        <animate attributeName="width"
-                 values="0;220;220;0"
-                 keyTimes="0;0.10;0.94;1"
-                 dur="6.4s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-
-    <clipPath id="clipL2">
-      <rect x="86" y="130" width="0" height="26">
-        <animate attributeName="width"
-                 values="0;320;320;0"
-                 keyTimes="0;0.16;0.94;1"
-                 dur="6.4s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-
-    <clipPath id="clipL3">
-      <rect x="86" y="156" width="0" height="26">
-        <animate attributeName="width"
-                 values="0;520;520;0"
-                 keyTimes="0;0.24;0.94;1"
-                 dur="6.4s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-
-    <clipPath id="clipL4">
-      <rect x="86" y="182" width="0" height="26">
-        <animate attributeName="width"
-                 values="0;160;160;0"
-                 keyTimes="0;0.30;0.94;1"
-                 dur="6.4s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-
-    <clipPath id="clipL5">
-      <rect x="86" y="208" width="0" height="26">
-        <animate attributeName="width"
-                 values="0;170;170;0"
-                 keyTimes="0;0.38;0.94;1"
-                 dur="6.4s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
   </defs>
 
   <!-- Background -->
@@ -144,38 +91,72 @@
     <circle cx="106" cy="73" r="6" fill="#f59e0b"/>
     <circle cx="126" cy="73" r="6" fill="#22c55e"/>
 
-    <!-- Typed lines (fixed y, never overflow) -->
+    <!-- Text typing loop: 6.4s (two rocket runs) -->
     <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
        font-size="18" fill="#e5e7eb" opacity="0.95">
-      <g clip-path="url(#clipL1)">
-        <text x="86" y="124">$ cat README.md</text>
+
+      <!-- Line 1 -->
+      <text x="86" y="124" opacity="0">$ cat README.md
+        <animate attributeName="opacity"
+                 values="0;1;1;0"
+                 keyTimes="0;0.08;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </text>
+
+      <!-- Line 2 -->
+      <text x="86" y="150" opacity="0">ChuxiangboWang / README.md
+        <animate attributeName="opacity"
+                 values="0;0;1;1;0"
+                 keyTimes="0;0.10;0.18;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </text>
+
+      <!-- Line 3 -->
+      <text x="86" y="176" opacity="0">This is Chuxiangbo&apos;s GitHub, welcome.
+        <animate attributeName="opacity"
+                 values="0;0;1;1;0"
+                 keyTimes="0;0.18;0.30;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </text>
+
+      <!-- Line 4 (simulate typing by revealing chunks) -->
+      <g>
+        <text x="86" y="202" opacity="0">Welcome!
+          <animate attributeName="opacity"
+                   values="0;0;1;1;0"
+                   keyTimes="0;0.30;0.36;0.94;1"
+                   dur="6.4s" repeatCount="indefinite"/>
+        </text>
       </g>
 
-      <g clip-path="url(#clipL2)">
-        <text x="86" y="150">ChuxiangboWang / README.md</text>
-      </g>
-
-      <g clip-path="url(#clipL3)">
-        <text x="86" y="176">This is Chuxiangbo's GitHub, welcome.</text>
-      </g>
-
-      <g clip-path="url(#clipL4)">
-        <text x="86" y="202">Welcome!</text>
-      </g>
-
-      <g clip-path="url(#clipL5)">
-        <text x="86" y="228">launching…</text>
+      <!-- Line 5 typing: launching… (chunked) -->
+      <g>
+        <text x="86" y="228" opacity="0">l
+          <animate attributeName="opacity" values="0;0;1;1;0"
+                   keyTimes="0;0.36;0.38;0.94;1" dur="6.4s" repeatCount="indefinite"/>
+        </text>
+        <text x="86" y="228" opacity="0">la
+          <animate attributeName="opacity" values="0;0;1;1;0"
+                   keyTimes="0;0.38;0.40;0.94;1" dur="6.4s" repeatCount="indefinite"/>
+        </text>
+        <text x="86" y="228" opacity="0">laun
+          <animate attributeName="opacity" values="0;0;1;1;0"
+                   keyTimes="0;0.40;0.42;0.94;1" dur="6.4s" repeatCount="indefinite"/>
+        </text>
+        <text x="86" y="228" opacity="0">launch
+          <animate attributeName="opacity" values="0;0;1;1;0"
+                   keyTimes="0;0.42;0.44;0.94;1" dur="6.4s" repeatCount="indefinite"/>
+        </text>
+        <text x="86" y="228" opacity="0">launching…
+          <animate attributeName="opacity" values="0;0;1;1;0"
+                   keyTimes="0;0.44;0.46;0.94;1" dur="6.4s" repeatCount="indefinite"/>
+        </text>
       </g>
     </g>
 
-    <!-- Cursor (blinks, and resets with the same 6.4s cycle) -->
-    <rect x="250" y="213" width="10" height="18" fill="#22c55e" opacity="0.0">
-      <!-- blink -->
-      <animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/>
-      <!-- gate: show mainly during early part of each cycle -->
-      <animate attributeName="opacity" values="0;1;1;0"
-               keyTimes="0;0.02;0.50;1"
-               dur="6.4s" repeatCount="indefinite"/>
+    <!-- Cursor blink (always) -->
+    <rect x="250" y="213" width="10" height="18" fill="#22c55e" opacity="0.9">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
     </rect>
 
     <!-- scan line -->
@@ -202,17 +183,11 @@
       <path d="M-8 -8 L-18 -14 L-6 -2 Z" fill="#94a3b8"/>
     </g>
 
-    <!-- Rocket launches twice, then loops -->
-    <animateMotion href="#rocket" dur="3.2s" begin="0s;launch2.end" rotate="auto" fill="remove" id="launch1">
-      <mpath href="#flightPath"/>
-    </animateMotion>
-
-    <animateMotion href="#rocket" dur="3.2s" begin="launch1.end" rotate="auto" fill="remove" id="launch2">
+    <animateMotion href="#rocket" dur="3.2s" repeatCount="indefinite" rotate="auto">
       <mpath href="#flightPath"/>
     </animateMotion>
   </g>
 
-  <!-- tiny label -->
   <text x="62" y="34" font-family="ui-monospace, Menlo, Monaco, Consolas, monospace"
         font-size="12" fill="#94a3b8" opacity="0.8">
     README animation • SVG
