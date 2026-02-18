@@ -19,13 +19,72 @@
       <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- subtle blur -->
     <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2"/>
     </filter>
 
-    <!-- rocket path -->
+    <!-- Moon shading -->
+    <radialGradient id="moonGrad" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#e5e7eb" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#cbd5e1" stop-opacity="0.95"/>
+    </radialGradient>
+
+    <filter id="moonShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Rocket path -->
     <path id="flightPath" d="M 140 205 C 260 165, 360 150, 470 135 S 710 95, 790 70" />
+
+    <!-- -------- Typing clips (each line reveals, then holds, then resets every 6.4s) --------
+         Total cycle = 6.4s (rocket twice: 2 * 3.2s)
+         Each rect anim: 0 -> W (type), hold, then reset to 0 near end.
+    -->
+    <clipPath id="clipL1">
+      <rect x="86" y="104" width="0" height="26">
+        <animate attributeName="width"
+                 values="0;220;220;0"
+                 keyTimes="0;0.10;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="clipL2">
+      <rect x="86" y="130" width="0" height="26">
+        <animate attributeName="width"
+                 values="0;320;320;0"
+                 keyTimes="0;0.16;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="clipL3">
+      <rect x="86" y="156" width="0" height="26">
+        <animate attributeName="width"
+                 values="0;520;520;0"
+                 keyTimes="0;0.24;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="clipL4">
+      <rect x="86" y="182" width="0" height="26">
+        <animate attributeName="width"
+                 values="0;160;160;0"
+                 keyTimes="0;0.30;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="clipL5">
+      <rect x="86" y="208" width="0" height="26">
+        <animate attributeName="width"
+                 values="0;170;170;0"
+                 keyTimes="0;0.38;0.94;1"
+                 dur="6.4s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
   </defs>
 
   <!-- Background -->
@@ -53,38 +112,70 @@
     </circle>
   </g>
 
-  <!-- Moon -->
-  <g>
-    <circle cx="820" cy="70" r="26" fill="#e5e7eb" opacity="0.95"/>
-    <circle cx="812" cy="64" r="6" fill="#cbd5e1" opacity="0.55"/>
-    <circle cx="832" cy="78" r="4" fill="#cbd5e1" opacity="0.45"/>
-    <circle cx="828" cy="58" r="3" fill="#cbd5e1" opacity="0.35"/>
+  <!-- Moon (more realistic) -->
+  <g filter="url(#moonShadow)">
+    <circle cx="820" cy="70" r="26" fill="url(#moonGrad)" opacity="0.98"/>
+    <ellipse cx="832" cy="78" rx="20" ry="18" fill="#94a3b8" opacity="0.12"/>
+
+    <g opacity="0.75">
+      <circle cx="812" cy="64" r="6.3" fill="#cbd5e1" opacity="0.55"/>
+      <circle cx="810.5" cy="62.8" r="2.2" fill="#ffffff" opacity="0.35"/>
+      <circle cx="814" cy="66" r="2.6" fill="#94a3b8" opacity="0.22"/>
+
+      <circle cx="832" cy="78" r="4.6" fill="#cbd5e1" opacity="0.48"/>
+      <circle cx="830.8" cy="77" r="1.6" fill="#ffffff" opacity="0.32"/>
+      <circle cx="833.5" cy="79.2" r="2.0" fill="#94a3b8" opacity="0.18"/>
+
+      <circle cx="828" cy="58" r="3.4" fill="#cbd5e1" opacity="0.42"/>
+      <circle cx="827" cy="57" r="1.2" fill="#ffffff" opacity="0.30"/>
+      <circle cx="829.2" cy="59" r="1.6" fill="#94a3b8" opacity="0.16"/>
+    </g>
+
+    <circle cx="820" cy="70" r="26" fill="#ffffff" opacity="0.03">
+      <animate attributeName="opacity" values="0.02;0.05;0.02" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
   <!-- Terminal card -->
   <g>
     <rect x="60" y="55" width="700" height="170" rx="16" fill="url(#term)" stroke="#1f2937" stroke-width="1.5"/>
-    <!-- Top bar -->
     <rect x="60" y="55" width="700" height="36" rx="16" fill="#0f172a" opacity="0.85"/>
-    <!-- traffic lights -->
     <circle cx="86" cy="73" r="6" fill="#ef4444"/>
     <circle cx="106" cy="73" r="6" fill="#f59e0b"/>
     <circle cx="126" cy="73" r="6" fill="#22c55e"/>
 
-    <!-- prompt text -->
-    <text x="86" y="125" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
-          font-size="18" fill="#e5e7eb" opacity="0.95">
-      <tspan x="86" dy="0">$ cat README.md</tspan>
-      <tspan x="86" dy="28">ChuxiangboWang / README.md</tspan>
-      <tspan x="86" dy="28"></tspan>
-      <tspan x="86" dy="28">Welcome!</tspan>
-      <tspan x="86" dy="28"></tspan>
-      <tspan x="86" dy="28">launching…</tspan>
-    </text>
+    <!-- Typed lines (fixed y, never overflow) -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+       font-size="18" fill="#e5e7eb" opacity="0.95">
+      <g clip-path="url(#clipL1)">
+        <text x="86" y="124">$ cat README.md</text>
+      </g>
 
-    <!-- blinking cursor -->
-    <rect x="200" y="212" width="10" height="18" fill="#22c55e" opacity="0.9">
-      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+      <g clip-path="url(#clipL2)">
+        <text x="86" y="150">ChuxiangboWang / README.md</text>
+      </g>
+
+      <g clip-path="url(#clipL3)">
+        <text x="86" y="176">This is Chuxiangbo's GitHub, welcome.</text>
+      </g>
+
+      <g clip-path="url(#clipL4)">
+        <text x="86" y="202">Welcome!</text>
+      </g>
+
+      <g clip-path="url(#clipL5)">
+        <text x="86" y="228">launching…</text>
+      </g>
+    </g>
+
+    <!-- Cursor (blinks, and resets with the same 6.4s cycle) -->
+    <rect x="250" y="213" width="10" height="18" fill="#22c55e" opacity="0.0">
+      <!-- blink -->
+      <animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/>
+      <!-- gate: show mainly during early part of each cycle -->
+      <animate attributeName="opacity" values="0;1;1;0"
+               keyTimes="0;0.02;0.50;1"
+               dur="6.4s" repeatCount="indefinite"/>
     </rect>
 
     <!-- scan line -->
@@ -98,25 +189,25 @@
     </g>
   </g>
 
-  <!-- Rocket (ASCII-ish) -->
+  <!-- Rocket -->
   <g>
     <g id="rocket" opacity="0.98">
-      <!-- flame -->
       <path d="M-10 14 C-26 6, -26 -6, -10 -14 C-18 -2, -18 2, -10 14 Z" fill="#f59e0b" opacity="0.85">
         <animate attributeName="opacity" values="0.35;0.9;0.35" dur="0.18s" repeatCount="indefinite"/>
       </path>
-      <!-- body -->
       <path d="M0 -16 C10 -10, 16 0, 10 10 C6 14, 2 16, 0 16 C-2 16, -6 14, -10 10 C-16 0, -10 -10, 0 -16 Z"
             fill="#e5e7eb"/>
-      <!-- window -->
       <circle cx="4" cy="-2" r="4" fill="#60a5fa" opacity="0.9"/>
-      <!-- fin -->
       <path d="M-8 8 L-18 14 L-6 2 Z" fill="#94a3b8"/>
       <path d="M-8 -8 L-18 -14 L-6 -2 Z" fill="#94a3b8"/>
     </g>
 
-    <!-- Move rocket along path -->
-    <animateMotion href="#rocket" dur="3.2s" repeatCount="indefinite" rotate="auto">
+    <!-- Rocket launches twice, then loops -->
+    <animateMotion href="#rocket" dur="3.2s" begin="0s;launch2.end" rotate="auto" fill="remove" id="launch1">
+      <mpath href="#flightPath"/>
+    </animateMotion>
+
+    <animateMotion href="#rocket" dur="3.2s" begin="launch1.end" rotate="auto" fill="remove" id="launch2">
       <mpath href="#flightPath"/>
     </animateMotion>
   </g>
