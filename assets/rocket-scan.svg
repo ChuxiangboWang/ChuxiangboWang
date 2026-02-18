@@ -166,23 +166,23 @@
 
       <!-- Line 4: Launching… (typed chunks, ends exactly at 0.42 => rocket launches) -->
       <g>
-        <text x="86" y="214" opacity="0">l
+        <text x="86" y="214" opacity="0">L
           <animate attributeName="opacity" values="0;0;1;1;0"
                    keyTimes="0;0.32;0.34;0.98;1" dur="19.2s" repeatCount="indefinite"/>
         </text>
-        <text x="86" y="214" opacity="0">la
+        <text x="86" y="214" opacity="0">La
           <animate attributeName="opacity" values="0;0;1;1;0"
                    keyTimes="0;0.34;0.36;0.98;1" dur="19.2s" repeatCount="indefinite"/>
         </text>
-        <text x="86" y="214" opacity="0">laun
+        <text x="86" y="214" opacity="0">Laun
           <animate attributeName="opacity" values="0;0;1;1;0"
                    keyTimes="0;0.36;0.38;0.98;1" dur="19.2s" repeatCount="indefinite"/>
         </text>
-        <text x="86" y="214" opacity="0">launch
+        <text x="86" y="214" opacity="0">Launch
           <animate attributeName="opacity" values="0;0;1;1;0"
                    keyTimes="0;0.38;0.40;0.98;1" dur="19.2s" repeatCount="indefinite"/>
         </text>
-        <text x="86" y="214" opacity="0">launching…
+        <text x="86" y="214" opacity="0">Launching…
           <animate attributeName="opacity" values="0;0;1;1;0"
                    keyTimes="0;0.40;0.42;0.98;1" dur="19.2s" repeatCount="indefinite"/>
         </text>
