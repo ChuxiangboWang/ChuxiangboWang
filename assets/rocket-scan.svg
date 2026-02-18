@@ -155,30 +155,27 @@
       </g>
     </g>
 
-<!-- Single cursor that moves right (no multiple cursors possible) -->
-<rect id="cursor" x="98" y="200" width="10" height="18" fill="#22c55e" opacity="0">
-  <!-- Move cursor right in discrete steps during typing window -->
+<!-- Single moving cursor: visible ONLY during typing window; blinks; moves right -->
+<rect id="cursor" x="98" y="200" width="10" height="18" fill="#22c55e" opacity="0.9">
+  <!-- show only during 0.32~0.42 -->
+  <animate attributeName="display"
+           dur="19.2s" repeatCount="indefinite"
+           values="none; inline; none"
+           keyTimes="0; 0.32; 0.42" />
+
+  <!-- blink while visible (this runs always, but display hides it outside window) -->
+  <animate attributeName="opacity"
+           values="0;1;0" dur="0.9s"
+           repeatCount="indefinite"/>
+
+  <!-- move right in steps during typing -->
   <animate attributeName="x"
            dur="19.2s" repeatCount="indefinite"
            calcMode="discrete"
-           values="98; 110; 130; 160; 210; 210"
-           keyTimes="0; 0.34; 0.36; 0.38; 0.40; 1" />
-
-  <!-- Opacity: only blink during 0.32~0.42, otherwise hidden -->
-  <animate attributeName="opacity"
-           dur="19.2s" repeatCount="indefinite"
-           calcMode="discrete"
-           values="
-             0; 0;
-             1; 0; 1; 0; 1; 0;
-             0
-           "
-           keyTimes="
-             0; 0.319;
-             0.320; 0.332; 0.344; 0.356; 0.368; 0.380; 0.392; 0.420;
-             1
-           " />
+           values="98;110;130;160;210"
+           keyTimes="0;0.34;0.36;0.38;0.40"/>
 </rect>
+
 
 
 
