@@ -6,6 +6,14 @@
       <stop offset="1" stop-color="#05070f"/>
     </linearGradient>
 
+    <!-- Star template -->
+<g id="star">
+  <circle cx="0" cy="0" r="1.2" fill="#e5e7eb">
+    <animate attributeName="opacity" values="0.15;1;0.15" dur="9s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+
     <!-- Terminal window gradient -->
     <linearGradient id="term" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#111827"/>
@@ -42,27 +50,53 @@
   <!-- ================= Background ================= -->
   <rect x="0" y="0" width="900" height="300" rx="18" fill="url(#bg)"/>
 
-  <!-- Stars (slow x3 from your original twinkle speeds) -->
-  <g opacity="0.9">
-    <circle cx="70" cy="55" r="1.5" fill="#e5e7eb">
-      <animate attributeName="opacity" values="0.1;0.9;0.1" dur="8.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="120" cy="30" r="1" fill="#e5e7eb">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="10.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="820" cy="40" r="1.2" fill="#e5e7eb">
-      <animate attributeName="opacity" values="0.15;0.95;0.15" dur="6.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="760" cy="120" r="1" fill="#e5e7eb">
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="9.3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="560" cy="35" r="1" fill="#e5e7eb">
-      <animate attributeName="opacity" values="0.1;0.8;0.1" dur="7.8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="620" cy="80" r="1.3" fill="#e5e7eb">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="12s" repeatCount="indefinite"/>
-    </circle>
-  </g>
+<!-- Stars (many) -->
+<g opacity="0.95">
+  <!-- top band -->
+  <use href="#star" x="50"  y="28"  transform="scale(0.9)"/>
+  <use href="#star" x="90"  y="18"  transform="scale(0.7)"/>
+  <use href="#star" x="140" y="40"  transform="scale(0.8)"/>
+  <use href="#star" x="190" y="22"  transform="scale(0.6)"/>
+  <use href="#star" x="240" y="35"  transform="scale(1.0)"/>
+  <use href="#star" x="290" y="20"  transform="scale(0.7)"/>
+  <use href="#star" x="340" y="42"  transform="scale(0.85)"/>
+  <use href="#star" x="390" y="26"  transform="scale(0.65)"/>
+  <use href="#star" x="440" y="38"  transform="scale(0.75)"/>
+  <use href="#star" x="490" y="18"  transform="scale(0.6)"/>
+  <use href="#star" x="540" y="30"  transform="scale(0.8)"/>
+  <use href="#star" x="590" y="22"  transform="scale(0.7)"/>
+  <use href="#star" x="640" y="44"  transform="scale(0.9)"/>
+  <use href="#star" x="690" y="20"  transform="scale(0.65)"/>
+  <use href="#star" x="740" y="36"  transform="scale(0.75)"/>
+  <use href="#star" x="790" y="24"  transform="scale(0.7)"/>
+  <use href="#star" x="850" y="32"  transform="scale(0.85)"/>
+
+  <!-- mid band -->
+  <use href="#star" x="70"  y="70"  transform="scale(0.7)"/>
+  <use href="#star" x="120" y="90"  transform="scale(0.9)"/>
+  <use href="#star" x="170" y="76"  transform="scale(0.6)"/>
+  <use href="#star" x="220" y="98"  transform="scale(0.8)"/>
+  <use href="#star" x="270" y="74"  transform="scale(0.7)"/>
+  <use href="#star" x="320" y="92"  transform="scale(0.65)"/>
+  <use href="#star" x="370" y="78"  transform="scale(0.85)"/>
+  <use href="#star" x="420" y="96"  transform="scale(0.75)"/>
+  <use href="#star" x="470" y="72"  transform="scale(0.6)"/>
+  <use href="#star" x="520" y="90"  transform="scale(0.8)"/>
+  <use href="#star" x="570" y="76"  transform="scale(0.7)"/>
+  <use href="#star" x="620" y="98"  transform="scale(0.9)"/>
+  <use href="#star" x="670" y="74"  transform="scale(0.65)"/>
+  <use href="#star" x="720" y="92"  transform="scale(0.75)"/>
+  <use href="#star" x="770" y="78"  transform="scale(0.7)"/>
+  <use href="#star" x="830" y="96"  transform="scale(0.85)"/>
+
+  <!-- lower band (avoid covering terminal too much; keep left/right edges) -->
+  <use href="#star" x="40"  y="140" transform="scale(0.7)"/>
+  <use href="#star" x="85"  y="160" transform="scale(0.6)"/>
+  <use href="#star" x="120" y="135" transform="scale(0.75)"/>
+  <use href="#star" x="820" y="140" transform="scale(0.7)"/>
+  <use href="#star" x="860" y="165" transform="scale(0.6)"/>
+</g>
+
 
   <!-- Moon (more realistic) -->
   <g filter="url(#moonShadow)">
