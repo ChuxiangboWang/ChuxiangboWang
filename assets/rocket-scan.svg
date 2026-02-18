@@ -91,7 +91,7 @@
 
   <!-- ================= Terminal ================= -->
   <g>
-    <rect x="60" y="55" width="700" height="170" rx="16" fill="url(#term)" stroke="#1f2937" stroke-width="1.5"/>
+    <rect x="60" y="55" width="700" height="200" rx="16" fill="url(#term)" stroke="#1f2937" stroke-width="1.5"/>
     <rect x="60" y="55" width="700" height="36" rx="16" fill="#0f172a" opacity="0.85"/>
     <circle cx="86" cy="73" r="6" fill="#ef4444"/>
     <circle cx="106" cy="73" r="6" fill="#f59e0b"/>
