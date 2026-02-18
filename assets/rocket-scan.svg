@@ -153,7 +153,7 @@
     </g>
 
     <!-- Cursor (moved up to match launching line) -->
-    <rect x="230" y="200" width="10" height="18" fill="#22c55e" opacity="0.9">
+    <rect x="250" y="200" width="10" height="18" fill="#22c55e" opacity="0.9">
       <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
     </rect>
 
